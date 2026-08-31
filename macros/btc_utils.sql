@@ -2,7 +2,7 @@
 
 {{column_name}} * (
     SELECT 
-        price
+        close_price_usd
          FROM {{ref('btc_usd_max')}}
     where  to_date(REPLACE(event_date,'UTC','')) = current_date()
     )
